@@ -34,5 +34,10 @@
 		<!-- responsive css -->
         <link rel="stylesheet" href="public/css/responsive.css">
 		<!-- modernizr js -->
+		<style>
+			.single-product{
+				height: 500px;
+			}
+		</style>
         <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>

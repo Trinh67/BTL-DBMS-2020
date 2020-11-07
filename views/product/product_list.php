@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2><?php if(isset($_GET['line'])) echo $_GET['line']; ?> Shop</h2>
+							<h2><?php if(isset($_GET['line'])) echo $_GET['line']; ?></h2>
 							<ul class="text-left">
 								<li><a href="?mod=page&act=home">Home </a></li>
 								<li><span> // </span><?php if(isset($_GET['line'])) echo $_GET['line']; ?></li>
@@ -79,112 +79,6 @@
 										</div>
 									</div>
 								    <?php } ?>
-									<!-- single product end -->
-									
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>new</span>
-												</div>
-												<a href="#"><img src="public/img/products/25.jpg" alt="Product Title" /></a>
-												<div class="actions-btn">
-													<a href="#"><i class="mdi mdi-cart"></i></a>
-													<a href="#" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#">men’s Gray t-shirt</a></p>
-												<div class="ratting">
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
-												</div>
-												<span>$55.20</span>
-											</div>
-										</div>
-									</div>
-									<!-- single product end -->
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type sell">
-													<span>sell</span>
-												</div>
-												<a href="#"><img src="public/img/products/2.jpg" alt="Product Title" /></a>
-												<div class="actions-btn">
-													<a href="#"><i class="mdi mdi-cart"></i></a>
-													<a href="#" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#">men’s White t-shirt</a></p>
-												<div class="ratting">
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
-												</div>
-												<span>$65.20</span>
-											</div>
-										</div>
-									</div>
-									<!-- single product end -->
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>-15</span>
-												</div>
-												<a href="#"><img src="public/img/products/10.jpg" alt="Product Title" /></a>
-												<div class="actions-btn">
-													<a href="#"><i class="mdi mdi-cart"></i></a>
-													<a href="#" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#">men’s Black t-shirt</a></p>
-												<div class="ratting">
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
-												</div>
-												<span>$65.20</span>
-											</div>
-										</div>
-									</div>
-									<!-- single product end -->
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<a href="#"><img src="public/img/products/26.jpg" alt="Product Title" /></a>
-												<div class="actions-btn">
-													<a href="#"><i class="mdi mdi-cart"></i></a>
-													<a href="#" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#">men’s Gray t-shirt</a></p>
-												<div class="ratting">
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star"></i>
-													<i class="mdi mdi-star-half"></i>
-													<i class="mdi mdi-star-outline"></i>
-												</div>
-												<span>$66.20</span>
-											</div>
-										</div>
-									</div>
 									<!-- single product end -->
 								</div>
 							</div>

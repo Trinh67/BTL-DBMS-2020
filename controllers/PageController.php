@@ -9,22 +9,10 @@
 		}
 
 		public function home(){
-			$data_s = array();
-			$line = 'Bóng đá';
-			$data_s = $this->page_model->All($line,8,0);
-			$data_ss = $this->page_model->All($line,8,8);
-			$data_bt = array();
-			$line = 'Bóng rổ';
-			$data_bt = $this->page_model->All($line,8,0);
-			$data_btt = $this->page_model->All($line,8,8);
-			$data_v = array();
-			$line = 'Bóng chuyền';
-			$data_v = $this->page_model->All($line,8,0);
-			$data_vv = $this->page_model->All($line,8,8);
-			$data_bk = array();
-			$line = 'Cầu lông';
-			$data_bk = $this->page_model->All($line,8,0);
-			$data_bkk = $this->page_model->All($line,8,0);
+			$data_hot = array();
+			$data_hot = $this->page_model->Hot(8,0);
+			$data_hots = array();
+			$data_hots = $this->page_model->Hot(4,8);
 			require_once('views/page/home.php');
 		}
 

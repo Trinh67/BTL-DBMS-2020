@@ -29,7 +29,7 @@
 						<li>
 							<div class="row text-center">
 								<div class="grid-content">
-								<?php foreach ($data_s as $value) { ?>
+								<?php foreach ($data_hot as $value) { ?>
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="single-product">
 											<div class="product-img">
@@ -62,7 +62,7 @@
 						</li>
 						<li>
 							<div class="row text-center">
-								<?php foreach ($data_ss as $value) { ?>
+								<?php foreach ($data_hots as $value) { ?>
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="single-product">
 											<div class="product-img">
@@ -93,14 +93,14 @@
 		</section>
 		<!-- featured-products section end -->
         <!-- tab-products section start -->
-		<div class="tab-products single-products section-padding extra-padding-top">
+		<div class="tab-products pages products-page section-padding extra-padding-top text-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
 							<div class="product-tab nav nav-tabs">
 								<ul>
-									<li class="active"><a data-toggle="tab" href="#arrival">Badminton<span>/</span></a></li>
+									<li class="active"><a data-toggle="tab" href="?mod=page&act=home&line='Cầu lông'">Badminton<span>/</span></a></li>
 									<li><a data-toggle="tab" href="#popular">Volleyball<span>/</span></a></li>
 									<li><a data-toggle="tab" href="#best">Basketball</a></li>
 								</ul>
@@ -108,91 +108,74 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-center tab-content">
+				<div class="tab-content">
 					<div class="tab-pane  fade in active" id="arrival">
-						<div class="wrapper">
-							<ul class="load-list load-list-two">
-								<li>
-									<div class="row text-center">
-									<?php foreach ($data_bt as $value) { ?>
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>-<?= number_format($value['sales_percent']) ?>%</span>
+					<div class="wrapper">
+						<ul class="load-list load-list-two">
+							<li>
+								<div class="row text-center">
+									<div class="grid-content">
+									<?php foreach ($data_v as $value) { ?>
+										<div class="col-xs-12 col-sm-6 col-md-3">
+											<div class="single-product">
+												<div class="product-img">
+													<div class="pro-type">
+														<span>new</span>
+													</div>
+													<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
+													<div class="actions-btn">
+														<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
+														<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
+														<a href="#"><i class="mdi mdi-heart"></i></a>
+													</div>
 												</div>
-												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
-												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['id'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
+												<div class="product-dsc">
+													<p><a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>"><?= $value['productName'] ?></a></p>
+													<div class="ratting">
+														<i class="mdi mdi-star"></i>
+														<i class="mdi mdi-star"></i>
+														<i class="mdi mdi-star"></i>
+														<i class="mdi mdi-star-half"></i>
+														<i class="mdi mdi-star-outline"></i>
+													</div>
+													<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
 												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#"><?= $value['productName'] ?></a></p>
-												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
 											</div>
 										</div>
-									</div>
-									<?php } ?>
-									<!-- single product end -->
-									</div>
-								</li>
-								<li>
-									<div class="row text-center">
-									<?php foreach ($data_btt as $value) { ?>
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>-<?= number_format($value['sales_percent']) ?>%</span>
+										<?php } ?>
+										<!-- single product end -->
+								</div>
+							</li>
+							<li>
+								<div class="row text-center">
+									<?php foreach ($data_ss as $value) { ?>
+										<div class="col-xs-12 col-sm-6 col-md-3">
+											<div class="single-product">
+												<div class="product-img">
+													<div class="pro-type">
+														<span>-<?= number_format($value['sales_percent']) ?>%</span>
+													</div>
+													<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
+													<div class="actions-btn">
+														<a href="?mod=cart&act=add&id=<?= $value['id'] ?>"><i class="mdi mdi-cart"></i></a>
+														<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
+														<a href="#"><i class="mdi mdi-heart"></i></a>
+													</div>
 												</div>
-												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
-												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['id'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
+												<div class="product-dsc">
+													<p><a href="#"><?= $value['productName'] ?></a></p>
+													<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
 												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#"><?= $value['productName'] ?></a></p>
-												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
 											</div>
 										</div>
-									</div>
-									<?php } ?>
+										<?php } ?>
 									<!-- single product end -->
-									</div>
-								</li>
-								<li>
-									<div class="row text-center">
-										<?php foreach ($data_btt as $value) { ?>
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<div class="single-product">
-											<div class="product-img">
-												<div class="pro-type">
-													<span>-<?= number_format($value['sales_percent']) ?>%</span>
-												</div>
-												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
-												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['id'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
-													<a href="#"><i class="mdi mdi-heart"></i></a>
-												</div>
-											</div>
-											<div class="product-dsc">
-												<p><a href="#"><?= $value['productName'] ?></a></p>
-												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
-											</div>
-										</div>
-									</div>
-									<?php } ?>
-									<!-- single product end -->
-									</div>
-								</li>
-							</ul>
-							<button id="load-more-two">Load More</button>
-						</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<button id="load-more-one">Load More</button>
+				</div>
 					</div>
 					<!-- arrival product end -->
 					<div class="tab-pane fade" id="popular">

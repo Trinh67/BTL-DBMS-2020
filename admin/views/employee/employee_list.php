@@ -46,7 +46,7 @@
                     <tr>
                       <th>Name</th>
                       <th>Email</th>
-                      <th>Position</th>
+                      <th>Job</th>
                       <th>Age</th>
                       <th>Start date</th>
                       <th>Salary</th>
@@ -57,7 +57,7 @@
                     <tr>
                       <th>Name</th>
                       <th>Email</th>
-                      <th>Position</th>
+                      <th>Job</th>
                       <th>Age</th>
                       <th>Start date</th>
                       <th>Salary</th>
@@ -67,15 +67,15 @@
                   <tbody>
             <?php foreach ($data as $emp) { ?>              
               <tr>
-                    <td><?= $emp['name'] ?></td>
+                    <td><?= $emp['lastName'] ?></td>
                     <td><?= $emp['email'] ?></td>
-                    <td><?= $emp['position'] ?></td>
+                    <td><?= $emp['jobTitle'] ?></td>
                     <td><?= $emp['age'] ?></td>
                     <td><?= $emp['startDate'] ?></td>
                     <td><?= number_format($emp['salary']) ?> VND</td>
-                    <td><a href="?mod=employee&act=detail&id=<?= $emp['id'] ?>" class="btn btn-success">Detail</a> 
-                    <a href="?mod=employee&act=update&id=<?= $emp['id'] ?>" class="btn btn-warning">Update</a>  
-                    <a href="?mod=employee&act=delete&id=<?= $emp['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                    <td><a href="?mod=employee&act=detail&id=<?= $emp['employeeNumber'] ?>" class="btn btn-success">Detail</a> 
+                    <a href="?mod=employee&act=update&id=<?= $emp['employeeNumber'] ?>" class="btn btn-warning">Update</a>  
+                    <a href="?mod=employee&act=delete&id=<?= $emp['employeeNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
                   </tr>
             <?php } ?>
             </tbody>

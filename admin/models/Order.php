@@ -6,9 +6,9 @@
 		function All(){
 		    // Cau lenh truy van co so du lieu
 		    $query = "SELECT
-					    od.*, p.productName, p.thumbnail 
+					    od.*, p.productName, p.image 
 					  FROM
-					    orderDetails od LEFT JOIN orders o ON od.id = o.id
+					    orderdetails od LEFT JOIN orders o ON od.id = o.id
 					    LEFT JOIN products p ON od.productCode = p.id; ";
 
 		    $data = array();
@@ -28,7 +28,7 @@
 		    $query = "SELECT
 				od.*, p.productName, p.thumbnail 
 			FROM
-				orderDetails od
+				orderoetails od
 				LEFT JOIN orders o ON od.id = o.id
 				LEFT JOIN products p ON od.productCode = p.id
 			WHERE

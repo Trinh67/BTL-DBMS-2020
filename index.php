@@ -47,6 +47,9 @@
 				case 'about':
 					$controller_obj->about();
 					break;
+				case 'account':
+					$controller_obj->account();
+					break;
 				default:
 					require_once('views/page/error-404.php');
 					break;

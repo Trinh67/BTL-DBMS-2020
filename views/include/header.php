@@ -21,11 +21,12 @@
 								<div class="right floatleft">
 									<ul class="clearfix">
 										<li><a href="?mod=page&act=home"><i class="mdi mdi-account"></i></a>
-											<h5><?php if(isset($_SESSION['customer']['customerName'])) echo $_SESSION['customer']['lastName']; else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['lastName'];?></h5>
+											<h5><?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
+											else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['lastName'];?></h5>
 											<ul> 
 												<?php if(isset($_SESSION['customer']) or isset($_SESSION['admin'])) { ?>												
 												<li><a href="?mod=login&act=logout">Logout</a></li>
-												<li><a href="views/page/my-account.php">My account</a></li>
+												<li><a href="?mod=page&act=account">My account</a></li>
 											    <?php }else{ ?>
 												<li><a href="?mod=login&act=login">Login</a></li>
 											    <?php } ?>	

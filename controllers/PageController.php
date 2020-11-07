@@ -19,5 +19,8 @@
 		public function about(){
 			require_once('views/page/about.php');
 		}
+		public function account(){
+			require_once('views/page/my-account.php');
+		}
 	}
  ?>

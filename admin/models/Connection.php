@@ -12,7 +12,7 @@
 		        
 		    $password = "";    // Mật khẩu truy cập
 		        
-		    $dbname = "sports shop";   // Tên cơ sở dữ liệu muốn kết nối đến
+		    $dbname = "sport_shop";   // Tên cơ sở dữ liệu muốn kết nối đến
 
 		        
 		    // Tạo kết nối đến CSDL

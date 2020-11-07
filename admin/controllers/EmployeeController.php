@@ -30,7 +30,7 @@
 			$data['name'] = $_POST['name'];
 		    $data['email'] = $_POST['email'];
 		    $data['password'] = md5($_POST['password']);
-		    $data['position'] = $_POST['position'];
+		    $data['jobTitle'] = $_POST['position'];
 		    $data['startDate'] = $_POST['startDate'];
 		    $data['age'] = $_POST['age'];
 		    $data['salary'] = $_POST['salary'];
@@ -59,7 +59,7 @@
 			$data['name'] = $_POST['name'];
 		    $data['email'] = $_POST['email'];
 		    if(md5($_POST['password']) != 'd41d8cd98f00b204e9800998ecf8427e') $data['password'] = md5($_POST['password']);
-		    $data['position'] = $_POST['position'];
+		    $data['jobTitle'] = $_POST['position'];
 		    $data['startDate'] = $_POST['startDate'];
 		    $data['age'] = $_POST['age'];
 		    $data['salary'] = $_POST['salary'];

@@ -34,7 +34,7 @@
 										<div class="single-product">
 											<div class="product-img">
 												<div class="pro-type">
-													<span>new</span>
+													<span>-<?= number_format($value['sales_percent']) ?>%</span>
 												</div>
 												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
 												<div class="actions-btn">
@@ -71,13 +71,20 @@
 												</div>
 												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
 												<div class="actions-btn">
-													<a href="?mod=cart&act=add&id=<?= $value['id'] ?>"><i class="mdi mdi-cart"></i></a>
+													<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
 													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
 													<a href="#"><i class="mdi mdi-heart"></i></a>
 												</div>
 											</div>
 											<div class="product-dsc">
-												<p><a href="#"><?= $value['productName'] ?></a></p>
+												<p><a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>"><?= $value['productName'] ?></a></p>
+												<div class="ratting">
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star"></i>
+													<i class="mdi mdi-star-half"></i>
+													<i class="mdi mdi-star-outline"></i>
+												</div>
 												<span><?= number_format($value['buyPrice']*(100 - $value['sales_percent'])/100)?> VND</span>
 											</div>
 										</div>
@@ -100,9 +107,10 @@
 						<div class="section-title text-center">
 							<div class="product-tab nav nav-tabs">
 								<ul>
-									<li class="active"><a data-toggle="tab" href="?mod=page&act=home&line='Cầu lông'">Badminton<span>/</span></a></li>
-									<li><a data-toggle="tab" href="#popular">Volleyball<span>/</span></a></li>
-									<li><a data-toggle="tab" href="#best">Basketball</a></li>
+									<li class="active"><a data-toggle="tab" href="#">Soccer<span>/</span></a></li>
+									<li><a data-toggle="tab" href="#">Badminton<span>/</span></a></li>
+									<li><a data-toggle="tab" href="#">Volleyball<span>/</span></a></li>
+									<li><a data-toggle="tab" href="#">Basketball</a></li>
 								</ul>
 							</div>
 						</div>

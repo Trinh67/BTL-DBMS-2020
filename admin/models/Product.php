@@ -10,7 +10,7 @@
 						pl.textDescription 
 					FROM
 						products p
-						LEFT JOIN productlines pl ON p.productLine = pl.id";
+						LEFT JOIN productlines pl ON p.productLine = pl.productLine";
 
 		    $data = array();
 
@@ -28,10 +28,10 @@
         	// Cau lenh truy van co so du lieu
 		    $query = "SELECT
 						p.*,
-						pl.textDescription 
+						pl.productDescription 
 					FROM
 						products p
-						LEFT JOIN productlines pl ON p.productLine = pl.id WHERE p.id = '".$id."'";
+						LEFT JOIN productlines pl ON p.productLine = pl.id WHERE p.productCode = '".$id."'";
 
 		    // Thuc thi cau lenh truy van co so du lieu
 

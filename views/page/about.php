@@ -85,7 +85,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="single-member">
 							<div class="member-img">
-								<a href="#"><img src="public/img/about/baby.jpg" alt="Team Member" width="270px" height="440px" /></a>
+								<a href="#"><img src="public/img/about/xuan.jpg" alt="Team Member" width="270px" height="440px" /></a>
 							</div>
 							<div class="share-member">
 								<div class="member-title">
@@ -167,7 +167,7 @@
 						<div class="googleMap-info">
 							<div id="googleMap"></div>
 							<div class="map-info">
-								<p><strong>Home</strong></p>
+								<p><strong>My University</strong></p>
 							</div>
 						</div>
 					</div>
@@ -179,8 +179,8 @@
 								<div class="col-sm-4">
 									<div class="single-contact">
 										<i class="mdi mdi-map-marker"></i>
-										<p>Add 15, Lane 2, Hoàng Tăng Bí Street,</p>
-										<p>Đông Ngạc, Bắc Từ Liêm, Hà Nội</p>
+										<p>Add 144, Xuan Thuy Street</p>
+										<p>Mai Dịch, Cầu Giấy, Hà Nội</p>
 									</div>
 								</div>
 								<div class="col-sm-4">
@@ -223,7 +223,7 @@
 				hue: '#E9E5DC',
 				scrollwheel: false,
 				mapTypeId:google.maps.MapTypeId.TERRAIN,
-				center: new google.maps.LatLng(21.084259, 105.778195)
+				center: new google.maps.LatLng(21.038448, 105.782751)
 			  };
 
 			  var map = new google.maps.Map(document.getElementById('googleMap'),

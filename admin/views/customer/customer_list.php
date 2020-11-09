@@ -27,7 +27,7 @@
       <!-- Page Heading -->
       <div class="container-fluid">
         <h2 align="center">List Users</h2>
-        <a href="?mod=customer&act=add" class="btn btn-primary">Add</a>
+        <!-- <a href="?mod=customer&act=add" class="btn btn-primary">Add</a> -->
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-success">
               <strong><?= $_COOKIE['msg'] ?></strong>
@@ -53,14 +53,14 @@
             <tbody>
             <?php foreach ($customers as $cus) { ?>              
               <tr>
-                    <td><?= $cus['id'] ?></td>
+                    <td><?= $cus['customerNumber'] ?></td>
                     <td><?= $cus['customerName'] ?></td>
                     <td><?= $cus['email'] ?></td>
                     <td><?= $cus['phone'] ?></td>
-                    <td><?= $cus['addressLine'] ?></td>
-                    <td><a href="?mod=customer&act=detail&id=<?= $cus['id'] ?>" class="btn btn-success">Detail</a> 
-                    <a href="?mod=customer&act=update&id=<?= $cus['id'] ?>" class="btn btn-warning">Update</a>  
-                    <a href="?mod=customer&act=delete&id=<?= $cus['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                    <td><?= $cus['addressLine1'] ?> <?= $cus['city'] ?> <?= $cus['country'] ?></td>
+                    <td><a href="?mod=customer&act=detail&id=<?= $cus['customerNumber'] ?>" class="btn btn-success">Detail</a> 
+                    <!-- <a href="?mod=customer&act=update&id=<?= $cus['id'] ?>" class="btn btn-warning">Update</a>   -->
+                    <a href="?mod=customer&act=delete&id=<?= $cus['customerNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
                   </tr>
             <?php } ?>
             </tbody>

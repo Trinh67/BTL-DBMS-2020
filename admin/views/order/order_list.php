@@ -43,7 +43,7 @@
               <tr>
                     <th>Order_Number</th>
                     <th>Product_Name</th>
-                    <th>Quantity_Ordered</th>
+                    <th>Quantity</th>
                     <th>Total_Price (VND)</th>
                     <th>Image</th>
                     <th>Action</th>
@@ -52,14 +52,14 @@
             <tbody>
             <?php foreach ($data as $order) { ?>              
               <tr>
-                    <td><?= $order['id'] ?></td>
+                    <td><?= $order['orderNumber'] ?></td>
                     <td><?= $order['productName'] ?></td>
                     <td><?= $order['quantityOrdered'] ?></td>
                     <td><?= number_format($order['quantityOrdered'] * $order['priceEach']) ?></td>
-                    <td><img src="public/img/<?= $order['thumbnail'] ?>" width="150px" hight="200px"></td>
-                    <td><a href="?mod=order&act=detail&id=<?= $order['id'] ?>" class="btn btn-success">Detail</a> 
-                    <a href="?mod=order&act=update&id=<?= $order['id'] ?>" class="btn btn-warning">Update</a>  
-                    <a href="?mod=order&act=delete&id=<?= $order['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                    <td><img src="<?= $order['image'] ?>" width="150px" hight="200px"></td>
+                    <td><a href="?mod=order&act=detail&id=<?= $order['orderNumber'] ?>" class="btn btn-success">Detail</a> 
+                    <!-- <a href="?mod=order&act=update&id=<?= $order['orderNumber'] ?>" class="btn btn-warning">Update</a>   -->
+                    <!-- <a href="?mod=order&act=delete&id=<?= $order['orderNumber'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td> -->
                   </tr>
             <?php } ?>
             </tbody>

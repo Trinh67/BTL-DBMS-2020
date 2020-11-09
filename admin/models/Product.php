@@ -7,7 +7,7 @@
 		    // Cau lenh truy van co so du lieu
 		    $query = "SELECT
 						p.*,
-						pl.productLine 
+						pl.productLine
 					FROM
 						products p
 						LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode";
@@ -53,7 +53,7 @@
 
         function delete($id){
         	// Cau lenh truy van co so du lieu
-    		$query = "DELETE FROM ".$this->table." WHERE id = '".$id."'";
+    		$query = "DELETE FROM ".$this->table." WHERE productCode = '".$id."'";
 
 		    // Thuc thi cau lenh truy van co so du lieu
 		    return $this->connection->query($query);

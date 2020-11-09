@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta https-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zent - Education And Technology Group</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<?php require_once('public/require/head.php') ?>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<body id="page-top">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Customer Detail</h3>
-    <hr>
-        <h4><em>Customer Name:</em> <?= $cus['id'] ?></h4>
-        <h4><em>Email: </em> <?= $cus['email'] ?> </h4>
-        <h4><em>Phone Number:</em> <?= $cus['phone'] ?></h4>
-        <h4><em>Address:</em> <?= $cus['addressLine'] ?></h4>
-        <a href="?mod=customer&act=list" type="button" class="btn btn-primary">Back</a>
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <?php require_once('public/require/sidebar.php') ?>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <?php require_once('public/require/header.php') ?>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+            <h3 align="center">Customer Detail</h3>
+            <hr>
+            <table class="table">
+                <th>Profile</th>
+                <th>Information</th>
+                <tr><h2><td><em>Customer Name:</em></td><td><?php echo $cus["customerName"] ?></td></h2></tr>
+                <tr><h2><td><em>Email:</em> </td><td><?php echo $cus["email"] ?></td></h2></tr>
+                <tr><h2><td><em>Phone Number:</em></td><td><?php echo $cus["phone"] ?></td></h2></tr>
+                <tr><h2><td><em>Address:</em></td><td><?php echo $cus["addressLine1"] ?>, <?php echo $cus["city"] ?>, <?php echo $cus["country"] ?></td></h2></tr>
+            </table>
+            <a href="?mod=customer&act=list" type="button" class="btn btn-primary">Back</a>
+        </div>
+        </div>
     </div>
 </body>
 </html>

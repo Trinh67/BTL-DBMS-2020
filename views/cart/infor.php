@@ -40,17 +40,17 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Name</label>
-                  <input type="text" class="form-control" required id="" placeholder="" name="name" value = "<?= $_SESSION['customer']['customerName'] ?>">
+                  <input type="text" class="form-control" required id="" placeholder="" name="name" value = "<?= $_SESSION['customer']['contactFirstName'] ?> <?= $_SESSION['customer']['contactLastName'] ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Phone Number</label>
-                  <input type="number" class="form-control" required id="" placeholder="Phone Number" value = "<?= $_SESSION['customer']['phone'] ?>" name="phone">
+                  <input type="numberic" class="form-control" required id="" placeholder="" value = "<?= $_SESSION['customer']['phone'] ?>" name="phone">
                 </div>
                 <div class="form-group">
                 <label for="exampleInputPassword1">Address</label>
-                  <input type="text" class="form-control" required id="" placeholder="" value = "<?= $_SESSION['customer']['addressLine'] ?>" name="address">
+                  <input type="text" class="form-control" required id="" placeholder="" value = "<?= $_SESSION['customer']['addressLine1'] ?>, <?= $_SESSION['customer']['city'] ?>, <?= $_SESSION['customer']['country'] ?>" name="address">
                 </div>
-                <a type="button" class="btn btn-warning" href="?mod=cart&act=list">Back Cart</a>
+                <a type="button" class="btn btn-warning" href="?mod=cart&act=list">Cart</a>
                 <button type="submit" class="btn btn-success">Submit</button>
              </form>
 

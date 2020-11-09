@@ -15,10 +15,10 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="pages-title-text text-center">
-							<h2><?php if(isset($_GET['line'])) echo $_GET['line']; ?></h2>
+							<h2><?php if(isset($_GET['type'])) echo $_GET['type']; ?></h2>
 							<ul class="text-left">
 								<li><a href="?mod=page&act=home">Home </a></li>
-								<li><span> // </span><?php if(isset($_GET['line'])) echo $_GET['line']; ?></li>
+								<li><span> // </span><?php if(isset($_GET['type'])) echo $_GET['type']; ?></li>
 							</ul>
 						</div>
 					</div>

@@ -15,7 +15,7 @@
       <li class="nav-item">
         <a class="nav-link" href="?mod=page&act=dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Trang chủ</span></a>
       </li>
 
       <!-- Divider -->

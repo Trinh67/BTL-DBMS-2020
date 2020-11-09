@@ -66,28 +66,27 @@
 
 		public function edit(){
 			$data = array();
-			$data['id'] = $_POST['id'];
+			$data['productCode'] = $_POST['id'];
 			$data['productName'] = $_POST['productName'];
-		    $data['price'] = $_POST['price'];
+		    $data['buyPrice'] = (int)$_POST['price'];
 		    $data['productDescription'] = $_POST['productDescription'];
 		    $data['quantityInStock'] = $_POST['quantityInStock'];
-		    $data['productLine'] = $_POST['productLine'];
+		    $data['productLineCode'] = $_POST['productLine'];
              
- 
-		    $target_dir = "public/img/";  // thư mục chứa file upload
-		    $thumbnail="";
+		    // $target_dir = "public/img/";  // thư mục chứa file upload
+		    // $thumbnail="";
 
-		    $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
+		    // $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
 
-		    $status_upload = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
+		    // $status_upload = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
 
-		    if ($status_upload) { // nếu upload file không có lỗi 
-		        $thumbnail = basename( $_FILES["thumbnail"]["name"]);
-		    }
-		    else $thumbnail = $_POST["thumbnail"];
+		    // if ($status_upload) { // nếu upload file không có lỗi 
+		    //     $thumbnail = basename( $_FILES["thumbnail"]["name"]);
+		    // }
+		    // else $thumbnail = $_POST["thumnail"];
 
-			$data['thumbnail'] = $thumbnail;
-                
+			//$data['image'] = $thumbnail;
+            $data['image'] = $_POST['image'];
 
 		    $status = $this->prod_model->edit($data);
 
@@ -97,7 +96,7 @@
 		    }
 		    else {
 		    	setcookie('msg','Cập nhật không thành công',time()+1);
-		    	header('Location: ?mod=product&act=update&id='.$data['id']);
+		    	header('Location: ?mod=product&act=update&id='.$data['productCode']);
 		    }
 		}
 

@@ -25,7 +25,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
 <head>
     <meta charset="utf-8">
     <meta https-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zent - Education And Technology Group</title>
+    <title>Sport Shop</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -46,8 +46,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
 </head>
 <body>
     <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Update Post</h3>
+    <h3 align="center">Update Product</h3>
     <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
@@ -57,7 +56,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
         <form action="?mod=product&act=edit" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">ID</label>
-                <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $product['id'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="id" value="<?= $product['productCode'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Product Name</label>
@@ -65,7 +64,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
             </div>
             <div class="form-group">
                 <label for="">Price Each (VND)</label>
-                <input type="text" class="form-control" id="" placeholder="" name="price" value="<?= $product['price'] ?>">
+                <input type="number" class="form-control" id="" placeholder="" name="price" value="<?= $product['buyPrice'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
@@ -75,7 +74,7 @@ while ($row = $result_prodlines->fetch_assoc()) {
                 <label for="">ProductLine</label>
                 <select name="productLine" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
-                  <option <?= ($prls['id'] == $product['productLine'])?'selected':"" ?> value="<?= $prls['id'] ?>"><?= $prls['textDescription'] ?></option>
+                  <option <?= ($prls['productLineCode'] == $product['productLineCode'])?'selected':"" ?> value="<?= $prls['productLineCode'] ?>"><?= $prls['productLine'] ?></option>
                 <?php } ?>
                 </select>
             </div>
@@ -84,13 +83,15 @@ while ($row = $result_prodlines->fetch_assoc()) {
                 <input type="number" class="form-control" id="" placeholder="" name="quantityInStock" value="<?= $product['quantityInStock'] ?>">
             </div>
             <div class="form-group">
-                <h4>Current Thumbnail: </h4><img src="public/img/<?= $product['thumbnail'] ?>" weight = "300px" height = "200px"><br/><br/>
+                <h4>Current Thumbnail: </h4><img src="<?= $product['image'] ?>" weight = "300px" height = "200px"><br/><br/>
                 <label for="">New Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail" value="<?= $product['thumbnail'] ?>">
+                <!-- <input type="file" class="form-control" id="" placeholder="" name="thumbnail" value="<?= $product['image'] ?>"> -->
+                <input type="text" class="form-control" id="" placeholder="" name="image" value="<?= $product['image'] ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-success">Update</button>
             <a href="?mod=product" type="button" class="btn btn-primary">Back</a>
         </form>
+        <br/><br/>
     </div>
     <script>
     $(document).ready(function() {

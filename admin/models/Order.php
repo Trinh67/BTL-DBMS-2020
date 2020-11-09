@@ -8,8 +8,8 @@
 		    $query = "SELECT
 					    od.*, p.productName, p.image 
 					  FROM
-					    orderdetails od LEFT JOIN orders o ON od.id = o.id
-					    LEFT JOIN products p ON od.productCode = p.id; ";
+					    orderdetails od LEFT JOIN orders o ON od.orderNumber = o.orderNumber
+					    LEFT JOIN products p ON od.productCode = p.productCode; ";
 
 		    $data = array();
 

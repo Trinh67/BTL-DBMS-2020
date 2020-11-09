@@ -47,6 +47,9 @@
 				case 'about':
 					$controller_obj->about();
 					break;
+				case 'search':
+					$controller_obj->search();
+					break;
 				case 'account':
 					$controller_obj->account();
 					break;

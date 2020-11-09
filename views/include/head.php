@@ -36,7 +36,7 @@
 		<!-- modernizr js -->
 		<style>
 			.single-product{
-				height: 500px;
+				height: 480px;
 			}
 		</style>
         <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>

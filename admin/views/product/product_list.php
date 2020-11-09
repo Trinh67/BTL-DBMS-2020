@@ -53,14 +53,14 @@
                   <tbody>
                   <?php foreach ($products as $product) { ?>              
                     <tr>
-                          <td><?= $product['textDescription'] ?></td>
+                          <td><?= $product['productLine'] ?></td>
                           <td><?= $product['productName'] ?></td>
-                          <td><?= number_format($product['price']) ?> VND</td>
+                          <td><?= number_format($product['buyPrice']) ?> VND</td>
                           <td><?= $product['quantityInStock'] ?></td>
-                          <td><img src="public/img/<?= $product['thumbnail'] ?>" width="150px" hight="200px"></td>
-                          <td><a href="../?mod=product&act=detail&id=<?= $product['id'] ?>" class="btn btn-success">Detail</a> 
-                          <a href="?mod=product&act=update&id=<?= $product['id'] ?>" class="btn btn-warning">Update</a>  
-                          <a href="?mod=product&act=delete&id=<?= $product['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
+                          <td><img src="<?= $product['image'] ?>" width="150px" hight="200px"></td>
+                          <td><a href="../?mod=product&act=detail&id=<?= $product['productCode'] ?>" class="btn btn-success">Detail</a> 
+                          <a href="?mod=product&act=update&id=<?= $product['productCode'] ?>" class="btn btn-warning">Update</a>  
+                          <a href="?mod=product&act=delete&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa?');" class="btn btn-danger">Delete</a></td>
                         </tr>
                   <?php } ?>
                   </tbody>

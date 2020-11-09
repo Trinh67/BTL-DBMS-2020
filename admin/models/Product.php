@@ -7,10 +7,10 @@
 		    // Cau lenh truy van co so du lieu
 		    $query = "SELECT
 						p.*,
-						pl.textDescription 
+						pl.productLine 
 					FROM
 						products p
-						LEFT JOIN productlines pl ON p.productLine = pl.productLine";
+						LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode";
 
 		    $data = array();
 
@@ -28,10 +28,10 @@
         	// Cau lenh truy van co so du lieu
 		    $query = "SELECT
 						p.*,
-						pl.productDescription 
+						pl.productLine 
 					FROM
 						products p
-						LEFT JOIN productlines pl ON p.productLine = pl.id WHERE p.productCode = '".$id."'";
+						LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode WHERE p.productCode = '".$id."'";
 
 		    // Thuc thi cau lenh truy van co so du lieu
 
@@ -45,8 +45,8 @@
             }
             $v = trim($v,",");
         	// Cau lenh truy van co so du lieu
-        	$query = "UPDATE ".$this->table." SET ".$v." WHERE id ='".$data['id']."'";
-
+        	$query = "UPDATE ".$this->table." SET ".$v." WHERE productCode ='".$data['productCode']."'";
+			//print($query); die;
 		    // Thuc thi cau lenh truy van co so du lieu
 		    return $this->connection->query($query);
         }

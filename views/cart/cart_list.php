@@ -51,31 +51,31 @@
 										$sum_amount = 0;
 										if($products != null)
 									    foreach ($products as $product) { 
-											$sum_amount += (number_format($product['buyPrice']*(100 - $product['sales_percent'])/100)*$product['SoLuong']);
+											$sum_amount += (($product['buyPrice']*(100 - $product['sales_percent'])/100)*$product['SoLuong']);
 									?>
 									<tr>
 										<td class="td-img text-left">
-											<a href="?mod=product&act=detail&id=<?= $product['id'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
+											<a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>" ><img src=<?= $product['image'] ?> alt="Add Product" /></a>
 											<div class="items-dsc">
-												<h5><a href="?mod=product&act=detail&id=<?= $product['id'] ?>"><?= $product['productName'] ?></a></h5>
+												<h5><a href="?mod=product&act=detail&id=<?= $product['productCode'] ?>"><?= $product['productName'] ?></a></h5>
 												<p class="itemcolor">Color : <span>Blue</span></p>
 												<p class="itemcolor">Size   : <span>SL</span></p>
 											</div>
 										</td>
-										<td><?= number_format($product['buyPrice']) ?> VND</td>
+										<td><?= number_format(($product['buyPrice']*(100 - $product['sales_percent'])/100)) ?> VND</td>
 										<td>
 											<form action="#" method="POST">
 												<div class="plus-minus">
-													<a href="?mod=cart&act=add&id=<?= $product['id'] ?>" class="inc qtybutton">+</a>
+													<a href="?mod=cart&act=add&id=<?= $product['productCode'] ?>" class="inc qtybutton">+</a>
 													<input type="text" value="<?= $product['SoLuong'] ?>"name="qtybutton" class="plus-minus-box">
-													<a href="?mod=cart&act=delete&id=<?= $product['id'] ?>" class="dec qtybutton">-</a>
+													<a href="?mod=cart&act=delete&id=<?= $product['productCode'] ?>" class="dec qtybutton">-</a>
 												</div>
 											</form>
 										</td>
 										<td>
-											<strong><?= number_format($product['buyPrice']*$product['SoLuong']) ?> VND</strong>
+											<strong><?= number_format(($product['buyPrice']*(100 - $product['sales_percent'])/100)*$product['SoLuong']) ?> VND</strong>
 										</td>
-										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa mặt hàng này?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
+										<td><a href="?mod=cart&act=delete&del=2&id=<?= $product['productCode'] ?>" onclick="return confirm('Bạn chắc chắn muốn xóa mặt hàng này?');"><i class="mdi mdi-close" title="Remove this product"></i></td>
 									</tr>
 									<?php } ?>
 									<?php if(isset($_SESSION['cart'])) { ?>
@@ -126,7 +126,7 @@
 											<td>30,000 VND</td>
 										</tr>
 										<tr>
-											<th>Vat</th>
+											<th>Vat (5%)</th>
 											<td><?= number_format($sum_amount*0.05) ?>VND</td>
 										</tr>
 									</tbody>
@@ -137,48 +137,6 @@
 										</tr>
 									</tfoot>
 								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row margin-top">
-					<div class="col-xs-12">
-						<div class="padding60">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="single-cart-form">
-										<div class="log-title">
-											<h3><strong>calculate shipping</strong></h3>
-										</div>
-										<div class="cart-form-text custom-input">
-											<p>Enter your coupon code if you have one!</p>
-											<form action="mail.php" method="post">
-												<input type="text" name="country" placeholder="Country" />
-												<div class="submit-text">
-													<button type="submit" >get a quote</button>
-												</div>
-											</form>
-										</div>
-									</div>	
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="single-cart-form">
-										<div class="cart-form-text post-state custom-input">
-											<form action="mail.php" method="post">
-												<input type="text" name="state" placeholder="Region / State" />
-											</form>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="single-cart-form">
-										<div class="cart-form-text post-state custom-input">
-											<form action="mail.php" method="post">
-												<input type="text" name="subject" placeholder="Post Code" />
-											</form>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>

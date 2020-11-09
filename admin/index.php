@@ -1,7 +1,13 @@
 <?php 
- 
 	$mod = (isset($_GET['mod'])?$_GET['mod']:'');
 	$act = (isset($_GET['act'])?$_GET['act']:'list');
+
+	function checkAuth(){
+		session_start();
+    	if(empty($_SESSION['isLogin'])){
+        	header('Location: ?mod=login&act=login');
+    	}
+    }
 
 	switch ($mod) {
 		case 'login':
@@ -157,10 +163,5 @@
 			break;
 	}
 
-	function checkAuth(){
-        session_start();
-    	if(empty($_SESSION['isLogin'])){
-        	header('Location: ?mod=login&act=login');
-    	}
-    }
+	
  ?>

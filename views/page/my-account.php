@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <?php require_once('../include/head.php') ?>
+	<?php require_once('views/include/head.php') ?>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- header section start -->
-		<?php require_once('../include/header.php') ?>
+		<?php require_once('views/include/header.php') ?>
         <!-- header section end -->
         <!-- pages-title-start -->
 		<div class="pages-title section-padding">
@@ -17,7 +17,7 @@
 						<div class="pages-title-text text-center">
 							<h2>My Account</h2>
 							<ul class="text-left">
-								<li><a href="index.php">Home </a></li>
+								<li><a href="?mod=page&act=home">Home </a></li>
 								<li><span> // </span>My Account</li>
 							</ul>
 						</div>
@@ -54,13 +54,18 @@
 													<form action="mail.php" method="post">
 														<div class="row">
 															<div class="col-md-6">
-																<input type="text" name="name" placeholder="First Name" />
+																<label>First Name:</label>
+																<input type="text" name="name" placeholder="<?php if(isset($_SESSION['customer']['contactFirstName'])) echo $_SESSION['customer']['contactFirstName']; 
+											else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['firstName'];?>" />
 															</div>
 															<div class="col-md-6">
-																<input type="text" name="name" placeholder="Last Name" />
+																<label>Last Name:</label>
+																<input type="text" name="name" placeholder="<?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
+											else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['lastName'];?>" />
 															</div>
 														</div>
-														<input type="text" name="email" placeholder="Email Address" />
+															<label>Email:</label>
+															<input type="text" name="email" placeholder="<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; ?>"/>
 														<div class="custom-select">
 															<select class="form-control">
 																<option> Country</option>
@@ -294,8 +299,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						<div class="my-right-side">
-							<a href="wishlist.php">My wishlists</a>
-							<a href="cart.php">Order history and details</a>
+							<a href="#">Order history and details</a>
 						</div>
 					</div>
 				</div>
@@ -303,11 +307,11 @@
 		</section>
 		<!-- my account content section end -->
         <!-- footer section start -->
-		<?php require_once('../include/footer.php') ?>        
+		<?php require_once('views/include/footer.php') ?>        
 		<!-- footer section end -->
         
 		<!-- all js here -->
 		<!-- jquery latest version -->
-        <?php require_once('../include/jquery.php') ?>    
+        <?php require_once('views/include/jquery.php') ?>    
     </body>
 </html>

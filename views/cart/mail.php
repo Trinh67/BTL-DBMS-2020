@@ -43,6 +43,9 @@
         //Tiến hành gửi email và kiểm tra lỗi
         if(!$mail->Send()) {
           echo "Có lỗi khi gửi mail: " . $mail->ErrorInfo;
+          setcookie('msg','Đặt hàng thành công!!! Tiếp tục mua hàng nào!!!',time()+2);
+          unset($_SESSION['cart']);
+          unset($_SESSION['sum']);
 				return false;
         } else {
           setcookie('msg','Đặt hàng thành công!!! Tiếp tục mua hàng nào!!!',time()+2);

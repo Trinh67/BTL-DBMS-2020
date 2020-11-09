@@ -12,8 +12,17 @@
 			$data_hot = array();
 			$data_hot = $this->page_model->Hot(8,0);
 			$data_hots = array();
-			$data_hots = $this->page_model->Hot(4,8);
+			$data_hots = $this->page_model->Hot(8,8);
 			require_once('views/page/home.php');
+		}
+
+		public function search(){
+			$data = $_POST['data'];
+			$data_search = array();
+			$data_search = $this->page_model->Search($data, 8, 0);
+			$data_searchs = array();
+			$data_searchs = $this->page_model->Search($data, 8, 8);
+			require_once('views/page/search.php');
 		}
 
 		public function about(){

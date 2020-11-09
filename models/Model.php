@@ -11,8 +11,24 @@
 
 		function All($line, $x, $y){
 		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN productLines pl ON pl.productLine = p.productLine LEFT JOIN sales s ON s.productCode = p.productCode  WHERE pl.productLine = '".$line."' LIMIT ".$y.",".$x;
-		    
+		    $query = "SELECT p.*, s.sales_percent, pl.productLine FROM products p LEFT JOIN productLines pl ON pl.productLineCode = p.productLineCode LEFT JOIN sales s ON s.productCode = p.productCode WHERE pl.productLineCode = '".$line."' LIMIT ".$y.",".$x;
+		    //print($query); die;
+		    $data = array();
+
+		    // Thuc thi cau lenh truy van co so du lieu
+		    $result = $this->connection->query($query);
+
+		    while($row = $result->fetch_assoc()) { 
+		    	$data[] = $row;
+		    }
+
+		    return $data;
+		}
+
+		function Search($data, $x, $y){
+		    // Cau lenh truy van co so du lieu
+		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN productLines pl ON pl.productLine = p.productLine LEFT JOIN sales s ON s.productCode = p.productCode  Where p.productName LIKE '%".$data."%' LIMIT ".$y.",".$x;
+		
 		    $data = array();
 
 		    // Thuc thi cau lenh truy van co so du lieu
@@ -27,7 +43,7 @@
 		
 		function Hot($x, $y){
 		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN productLines pl ON pl.productLine = p.productLine LEFT JOIN sales s ON s.productCode = p.productCode  ORDER BY p.views DESC LIMIT ".$y.",".$x;
+		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode  ORDER BY p.views DESC LIMIT ".$y.",".$x;
 		    
 		    $data = array();
 

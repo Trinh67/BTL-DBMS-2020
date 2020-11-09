@@ -1,26 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
-    <body onload="return <?php if(isset($_COOKIE['msg'])){ ?>
-			            alert('Thành công. Tiếp tục mua hàng nào!!!')
-			          <?php }?>">
-
+    <body>
         <!-- header section start -->
 		<?php require_once('views/include/header.php') ?>
         <!-- header section end -->
-        
-        <!-- slider-section-start -->
-		<div>
-			<img src="public/img/slider/11.jpg" alt="main slider" title="#htmlcaption"/>
+        <!-- pages-title-start -->
+		<div class="pages-title section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="pages-title-text text-center">
+							<h2>Search Results</h2>
+							<ul class="text-left">
+								<li><a href="index.php">Home </a></li>
+								<li><span> // </span>Search Results</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<!-- slider section end -->
-        <!-- featured-products section start -->
+		<!-- pages-title-end -->
 		<section class="pages products-page section-padding text-center extra-padding-bottom">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-title text-center">
-							<h2>Featured Products</h2>
+							<h2>Products</h2>
 						</div>
 					</div>
 				</div>
@@ -29,7 +36,7 @@
 						<li>
 							<div class="row text-center">
 								<div class="grid-content">
-								<?php foreach ($data_hot as $value) { ?>
+								<?php foreach ($data_search as $value) { ?>
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="single-product">
 											<div class="product-img">
@@ -63,7 +70,7 @@
 						<li>
 							<div class="row text-center">
 								<div class="grid-content">
-								<?php foreach ($data_hots as $value) { ?>
+								<?php foreach ($data_searchs as $value) { ?>
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="single-product">
 											<div class="product-img">
@@ -101,62 +108,7 @@
 			</div>
 		</section>
 		<!-- featured-products section end -->
-        <!-- tab-products section start -->
-		<div class="tab-products pages products-page section-padding extra-padding-top text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="section-title text-center">
-							<div class="product-tab nav nav-tabs">
-								<ul>
-									<li class="active"><a href="?mod=product&line=1&type=Soccer">Soccer<span>/</span></a></li>
-									<li><a href="?mod=product&line=2&type=Basketball">Basketball<span>/</span></a></li>
-									<li><a href="?mod=product&line=3&type=Badminton">Badminton<span>/</span></a></li>
-									<li><a href="?mod=product&line=4&type=Volleyball">Volleyball</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- tab-products section end -->
-        <!-- service section start -->
-		<section class="service-area section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="section-title text-center">
-							<h2>Our Service</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-sm-4">
-						<div class="service-text">
-							<i class="mdi mdi-truck"></i>
-							<h4>home delivery</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="service-text">
-							<i class="mdi mdi-lock"></i>
-							<h4>PAYMENT SECURED</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="service-text">
-							<i class="mdi mdi-rotate-left"></i>
-							<h4>30 days money back</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- service section end -->
+        
         <?php require_once('views/include/quick_view.php') ?> 
         <!-- footer section start -->
 		<?php require_once('views/include/footer.php') ?>

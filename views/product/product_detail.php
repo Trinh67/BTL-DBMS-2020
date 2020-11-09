@@ -46,18 +46,6 @@
 									</div>
 									<a class="simpleLens-image" data-lens-image=<?= $data['image'] ?> href="#"><img src=<?= $data['image'] ?> alt="" alt="" width="240px" height="500px" class="simpleLens-big-image"></a>
 								</div>
-								<div class="simpleLens-container tab-pane fade in" id="q-sin-3">
-									<div class="pro-type">
-										<span>-15%</span>
-									</div>
-									<a class="simpleLens-image" data-lens-image="public/img/products/z3.jpg" href="#"><img src="public/img/products/z3.jpg" alt="" class="simpleLens-big-image"></a>
-								</div>
-								<div class="simpleLens-container tab-pane fade in" id="q-sin-4">
-									<div class="pro-type">
-										<span>new</span>
-									</div>
-									<a class="simpleLens-image" data-lens-image="public/img/products/z4.jpg" href="#"><img src="public/img/products/z4.jpg" alt="" class="simpleLens-big-image"></a>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -70,7 +58,7 @@
 						<h3><?= $data['productName'] ?></h3>
 						<span>Sport men’s fashion</span>
 						<div class="ratting floatright">
-							<p>( 27 Rating )</p>
+							<p>( <?= $data['views'] ?> Rating )</p>
 							<i class="mdi mdi-star"></i>
 							<i class="mdi mdi-star"></i>
 							<i class="mdi mdi-star"></i>
@@ -111,9 +99,7 @@
 							</div>
 						</div>
 						<div class="list-btn">
-							<a href="?mod=cart&act=add&id=<?= $data['id'] ?>">add to cart</a>
-							<a href="#">wishlist</a>
-							<a href="#" data-toggle="modal" data-target="#quick-view">zoom</a>
+							<a href="?mod=cart&act=add&id=<?= $data['productCode'] ?>">add to cart</a>
 						</div>
 						<div class="share-tag clearfix">
 							<ul class="blog-share floatleft">

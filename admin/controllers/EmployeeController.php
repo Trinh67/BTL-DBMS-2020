@@ -27,7 +27,8 @@
 
 		public function store(){
 			$data = array();
-			$data['name'] = $_POST['name'];
+			$data['employeeNumber'] = $_POST['id'];
+			$data['lastName'] = $_POST['name'];
 		    $data['email'] = $_POST['email'];
 		    $data['password'] = md5($_POST['password']);
 		    $data['jobTitle'] = $_POST['position'];
@@ -55,8 +56,8 @@
 
 		public function edit(){
 			$data = array();
-			$data['id'] = $_POST['id'];
-			$data['name'] = $_POST['name'];
+			$data['employeeNumber'] = $_POST['id'];
+			$data['lastName'] = $_POST['name'];
 		    $data['email'] = $_POST['email'];
 		    if(md5($_POST['password']) != 'd41d8cd98f00b204e9800998ecf8427e') $data['password'] = md5($_POST['password']);
 		    $data['jobTitle'] = $_POST['position'];

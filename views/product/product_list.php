@@ -38,9 +38,6 @@
 													<li><a href="#"> <i class="mdi mdi-view-list"></i> </a></li>
 												</ul>
 											</li>
-											<li class="sort-by floatright">
-												Showing 1-12 of 89 Results
-											</li>
 										</ul>
 									</div>
 								</div>

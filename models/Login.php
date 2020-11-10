@@ -19,6 +19,24 @@
 		    // Thuc thi cau lenh truy van co so du lieu
 
 		    return $data = $this->connection->query($query)->fetch_assoc();
+		}
+		
+		function register($data){
+			$f = "";
+        	$v = "";
+        	foreach ($data as $key => $value) {
+        		$f .= $key.",";
+        		$v .= "'".$value."',";
+        	}
+
+        	$f = trim($f,",");
+        	$v = trim($v,",");
+        	
+        	// Cau lenh truy van co so du lieu
+        	$query = "INSERT INTO customers(".$f.") VALUES (".$v.");";
+		    //print($query); die;
+		    // Thuc thi cau lenh truy van co so du lieu
+		    return $this->connection->query($query);
         }
 
 	}

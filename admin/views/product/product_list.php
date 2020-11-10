@@ -27,7 +27,7 @@
       <!-- Page Heading -->
       <div class="container-fluid">
         <h2 align="center">List Products</h2>
-        <a href="?mod=product&act=add" class="btn btn-primary">Add</a>
+        <a href="?mod=product&act=add" class="btn btn-primary">Add</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
             <div class="alert alert-success">
               <strong><?= $_COOKIE['msg'] ?></strong>

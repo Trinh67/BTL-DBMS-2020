@@ -40,5 +40,32 @@
 		    header('Location: ?mod=page&act=home');	
 		}
 
+		public function store(){
+			$data = array();
+			$data['customerNumber'] = '1';
+			$data['contactFirstName'] = $_POST['firstName'];
+			$data['contactLastName'] = $_POST['lastName'];
+			$data['customerName'] = $data['contactLastName'];
+		    $data['email'] = $_POST['email'];
+		    $data['password'] = md5($_POST['password']);
+		    $data['phone'] = $_POST['phone'];
+		    $data['addressLine1'] = $_POST['addressLine1'];
+		    $data['city'] = $_POST['city'];
+		    $data['country'] = $_POST['country'];
+
+		    $status = $this->login_model->register($data);
+
+		    if($status == true){
+				$_SESSION['isLogin'] = true;
+	            $_SESSION['customer'] = $data;
+		    	setcookie('msg','Đăng kí thành công',time()+1);
+		    	header('Location: ?mod=page&act=home');
+		    }
+		    else {
+				//setcookie('msg','Đăng kí không thành công',time()+1);
+				//print("failed"); die;
+		    	header('Location: ?mod=page');
+		    }
+		}
 	}
  ?>

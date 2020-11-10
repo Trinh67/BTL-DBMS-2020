@@ -64,18 +64,17 @@
 								<h3><strong>new customers</strong></h3>
 							</div>
 							<div class="custom-input">
-								<form action="mail.php" method="post">
-									<input type="text" name="name" placeholder="Name here.." />
-									<input type="text" name="email" placeholder="Email Address.." />
-									<input type="text" name="number" placeholder="Phone Number.." />
-									<input type="text" name="address" placeholder="Password" />
-									<input type="password" name="password" placeholder="Confirm Password" />
-									<label class="first-child">
-										<input type="radio" name="rememberme" value="forever">
-										Sign up for our newsletter!
-									</label>
-									<div class="submit-text coupon">
-										<a href="my-account.php">Register</a>
+								<form action="?mod=login&act=register" method="post">
+									<input type="text" name="firstName" placeholder="First name here.." />
+									<input type="text" name="lastName" placeholder="Last name here.." />
+									<input type="text" required name="email" placeholder="Email Address.." />
+									<input type="text" name="phone" placeholder="Phone Number.." />
+									<input type="password" required name="password" placeholder="Password" />
+									<input type="text" name="addressLine1" placeholder="Address" />
+									<input type="text" name="city" placeholder="City" />
+									<input type="text" name="country" placeholder="Country" />
+									<div>
+										<button type="submit" class=" submit-text btn btn-primary">Register</button>
 									</div>
 								</form>
 							</div>

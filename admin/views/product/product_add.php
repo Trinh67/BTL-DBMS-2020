@@ -23,33 +23,34 @@ while ($row = $result_prodlines->fetch_assoc()) {
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta https-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zent - Education And Technology Group</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<?php require_once('public/require/head.php') ?>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<body id="page-top">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <!-- Page Wrapper -->
+  <div id="wrapper">
 
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Sidebar -->
+    <?php require_once('public/require/sidebar.php') ?>
+    <!-- End of Sidebar -->
 
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
-</head>
-<body>
-    <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Add New Product</h3>
-    <hr>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <?php require_once('public/require/header.php') ?>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+       
+          
+      <!-- Page Heading -->
+      <div class="container-fluid">
+        <h2 align="center">Add Product</h2>
+        <hr>
         <?php if(isset($_COOKIE['msg'])){ ?>
         <div class="alert alert-warning">
           <strong><?= $_COOKIE['msg'] ?></strong>
@@ -74,9 +75,9 @@ while ($row = $result_prodlines->fetch_assoc()) {
             </div>
             <div class="form-group">
                 <label for="">ProductLine</label>
-                <select name="productLine" class="form-control">
+                <select name="productLineCode" class="form-control">
                 <?php foreach ($prodlines as $prls) {?>  
-                  <option value="<?= $prls['id'] ?>"><?= $prls['textDescription'] ?></option>
+                  <option value="<?= $prls['productLineCode'] ?>"><?= $prls['textDescription'] ?></option>
                 <?php } ?>
                 </select>
             </div>
@@ -85,12 +86,17 @@ while ($row = $result_prodlines->fetch_assoc()) {
                 <input type="number" class="form-control" id="" placeholder="" name="quantityInStock">
             </div>
             <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
+                <label for="">Sale Percent</label>
+                <input type="number" class="form-control" id="" placeholder="" name="sale">
+            </div>
+            <div class="form-group">
+                <label for="">Image</label>
+                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
             <a href="?mod=product" type="button" class="btn btn-primary">Back</a>
         </form>
+        <br/>
     </div>
     <script>
     $(document).ready(function() {

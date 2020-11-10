@@ -30,7 +30,10 @@
             </div>
             <?php }?>
             <form action="?mod=employee&act=store" method="POST" role="form" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?= $emp['id'] ?>">
+                <div class="form-group">
+                    <label for="">Employee Number</label>
+                    <input type="text" class="form-control" required id="" placeholder="" name="id" value="">
+                </div>
                 <div class="form-group">
                     <label for="">Name</label>
                     <input type="text" class="form-control" required id="" placeholder="" name="name" value="">

@@ -17,6 +17,9 @@
 				case 'logout':
 					$controller_obj->logout();
 					break;
+				case 'register':
+					$controller_obj->store();
+					break;
 				default:
 					require_once('views/page/error-404.php');
 					break;

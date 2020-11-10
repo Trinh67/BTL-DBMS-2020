@@ -27,7 +27,7 @@
 
           <!-- Page Heading -->
           <h2 align="center">List Employees</h2>
-          <a href="?mod=employee&act=add" class="btn btn-primary">Add</a>
+          <a href="?mod=employee&act=add" class="btn btn-primary">Add</a><br/>
           <?php if(isset($_COOKIE['msg'])){ ?>
               <div class="alert alert-success">
                 <strong><?= $_COOKIE['msg'] ?></strong>

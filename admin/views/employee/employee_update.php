@@ -25,7 +25,7 @@
         <h3 align="center">Update Employee</h3>
         <hr>
             <form action="?mod=employee&act=edit" method="POST" role="form" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?= $emp['id'] ?>">
+                <input type="hidden" name="id" value="<?= $emp['employeeNumber'] ?>">
                 <div class="form-group">
                     <label for="">Name</label>
                     <input type="text" class="form-control" required id="" placeholder="" name="name" value="<?php echo $emp['lastName'] ?>">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Salary</label>
-                    <input type="number_format" class="form-control" required id="" placeholder="" name="salary" value="<?php echo number_format($emp['salary']) ?>">
+                    <input type="number" class="form-control" required id="" placeholder="" name="salary" value="<?php echo $emp['salary'] ?>">
                 </div>
                 <div align="center">
                     <button type="submit" class="btn btn-primary">Update</button>

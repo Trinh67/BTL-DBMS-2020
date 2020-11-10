@@ -37,8 +37,8 @@
 		}
 		$v = trim($v,",");
 		// Cau lenh truy van co so du lieu
-		$query = "UPDATE ".$this->table." SET ".$v." WHERE employeeNumber =".$data['id'];
-
+		$query = "UPDATE ".$this->table." SET ".$v." WHERE employeeNumber =".$data['employeeNumber'];
+		//print($query); die;
 		// Thuc thi cau lenh truy van co so du lieu
 		return $this->connection->query($query);
 	}

@@ -65,7 +65,7 @@
 							<i class="mdi mdi-star-half"></i>
 							<i class="mdi mdi-star-outline"></i>
 						</div>
-						<h5><del><?= number_format($data['buyPrice']) ?> VND</del> <?= number_format($data['buyPrice']*(100 - $data['sales_percent'])/100)?> VND</h5>
+<h5><?php if($data['sales_percent'] > 0) { ?><del><?= number_format($data['buyPrice']) ?> VND</del> <?php } ?><?= number_format($data['buyPrice']*(100 - $data['sales_percent'])/100)?> VND</h5>
 						<p style="font-size: 18px"><?= $data['productDescription'] ?></p>
 						<div class="all-choose">
 							<div class="s-shoose">

@@ -27,8 +27,9 @@
 
 		function Search($data, $x, $y){
 		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN productLines pl ON pl.productLine = p.productLine LEFT JOIN sales s ON s.productCode = p.productCode  Where p.productName LIKE '%".$data."%' LIMIT ".$y.",".$x;
-		
+		    //$query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode  Where p.productName LIKE '%".$data."%' LIMIT ".$y.",".$x;
+			$query = "SELECT * FROM findProduct_view Where productName LIKE '%".$data."%' LIMIT ".$y.",".$x;
+			//print($query); die;
 		    $data = array();
 
 		    // Thuc thi cau lenh truy van co so du lieu
@@ -59,8 +60,8 @@
 		
         function find($id){
         	// Cau lenh truy van co so du lieu
-		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode WHERE p.productCode = '".$id."'";
-
+		    //$query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode WHERE p.productCode = '".$id."'";
+			$query = "SELECT * FROM findProduct_view  WHERE productCode = '".$id."'";
 		    // Thuc thi cau lenh truy van co so du lieu
 
 		    return $data = $this->connection->query($query)->fetch_assoc();

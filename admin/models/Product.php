@@ -5,13 +5,13 @@
 
 		function All(){
 		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT
-						p.*,
-						pl.productLine
-					FROM
-						products p
-						LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode";
-
+		    // $query = "SELECT
+			// 			p.*,
+			// 			pl.productLine
+			// 		FROM
+			// 			products p
+			// 			LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode";
+			$query = "SELECT * FROM product_view";
 		    $data = array();
 
 		    // Thuc thi cau lenh truy van co so du lieu
@@ -26,17 +26,35 @@
 
 		function find($id){
         	// Cau lenh truy van co so du lieu
-		    $query = "SELECT
-						p.*,
-						pl.productLine 
-					FROM
-						products p
-						LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode WHERE p.productCode = '".$id."'";
-
+		    // $query = "SELECT
+			// 			p.*,
+			// 			pl.productLine 
+			// 		FROM
+			// 			products p
+			// 			LEFT JOIN productlines pl ON p.productLineCode = pl.productLineCode WHERE p.productCode = '".$id."'";
+			$query = "SELECT * FROM product_view WHERE productCode = '".$id."'";
 		    // Thuc thi cau lenh truy van co so du lieu
 
 		    return $data = $this->connection->query($query)->fetch_assoc();
-        }
+		}
+		
+		function create($data){
+			$f = "";
+			$v = "";
+			foreach ($data as $key => $value) {
+				$f .= $key.",";
+				$v .= "'".$value."',";
+			}
+	
+			$f = trim($f,",");
+			$v = trim($v,",");
+			
+			// Cau lenh truy van co so du lieu
+			$query = "INSERT INTO ".$this->table."(".$f.") VALUES (".$v.");";
+			//print($query); die;
+			// Thuc thi cau lenh truy van co so du lieu
+			return $this->connection->query($query);
+		}
  
         function edit($data){
         	$v = "";

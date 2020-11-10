@@ -42,7 +42,6 @@
 											<ul>
 												<li><a href="?mod=page&act=account">My account</a></li>
 												<li><a href="?mod=cart&act=list">My cart</a></li>
-												<li><a href="#">Check out</a></li>
 											</ul>
 										<?php } ?>	
 										</li>

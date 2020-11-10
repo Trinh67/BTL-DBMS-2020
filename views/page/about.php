@@ -39,11 +39,11 @@
 						<div class="col-sm-12 col-md-6">
 							<div class="about-text">
 								<div class="about-author">
-									<h4>Giới thiệu đôi chút về mình và sản phẩm này<br /> (sports store)</h4>
+									<h3>Giới thiệu đôi chút về sản phẩm này<br /> (sports store)</h3>
 								</div>
-								<p>Mình là người khá nhút nhát, thích xem và chơi thể thao đặc biệt là bóng đá. Cờ vua thì mình cũng biết chút chút, ảnh kia chụp khi mình tham gia giải cờ của trường trong hội thao UET và khá may mắn mình đã giành đc giải ba ^^. Mình cũng khá là thích lượn lờ quanh Hồ Tây vào buổi chiều cuối tuần, nosgiusp mình cảm thấy thoải mái và thư giãn sau một tuần học tập căng thẳng, đặc biệt là Hồ Tây cũng mát nữa và không khí cũng trong lành hehe. Là dân kĩ thuật mà, nên mình không giỏi viết văn mấy nên là mình chia sẻ vậy thôi nha. Mọi người có thể kết bạn để trao đổi, giao lưu và giúp nhau học tập qua link face mình để ở phần "Contact" nha ^_^.</p>
+								<p style="font-size: 14px">Mình là người khá nhút nhát, thích xem và chơi thể thao đặc biệt là bóng đá. Bởi vì sở thích đó mà mình đã lấy đề tài cho Team là Web thương mại điện tử bán đồ thể thao. Vì trước đây mình đã làm trước một chút nên bài lần này mình đã tận dụng và phát triển thêm về cơ sở dữ liệu, chức năng và tối ưu câu truy vấn cơ sở dữ liệu. Mọi người có thể kết bạn để trao đổi, giao lưu và giúp nhau học tập qua link face mình để ở phần "Contact" nha ^_^.</p>
 								
-								<p>Trang Store này mình lấy template có sẵn để cắt và dùng các kiếm thức PHP đã được học để load dữ liệu và xử lí yêu cầu của người dùng. Do mình chỉ mới phát triển trong khoảng 2 tuần nên chưa có nhiều chức năng và còn nhiều thiếu sót nhưng đó cũng là thành quả mà mình đã cố gắng trong mùa thi cuối năm 2 này. Thanks you for reading !!!</p>
+								<p style="font-size: 14px">Trang Web này mình dùng các kiếm thức PHP đã được học để load dữ liệu và xử lí yêu cầu của người dùng. Do vẫn chưa có nhiều kiến thức nên chưa có nhiều chức năng và còn nhiều thiếu sót nhưng đó cũng là thành quả mà Team mình đã cố gắng trong kì 1 năm 3 này. Thanks you for reading !!!</p>
 							</div>
 						</div>
 					</div>
@@ -89,7 +89,7 @@
 							</div>
 							<div class="share-member">
 								<div class="member-title">
-									<h4>Kiều Oanh</h4>
+									<h4>Văn Xuân</h4>
 								</div>
 								<div class="member-btn">	
 									<a href="#"><i class="mdi mdi-facebook"></i></a>

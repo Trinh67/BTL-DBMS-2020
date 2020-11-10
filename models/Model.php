@@ -43,8 +43,8 @@
 		
 		function Hot($x, $y){
 		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode  ORDER BY p.views DESC LIMIT ".$y.",".$x;
-		    
+		    //$query = "SELECT p.*, s.sales_percent FROM products p LEFT JOIN sales s ON s.productCode = p.productCode  ORDER BY p.views DESC LIMIT ".$y.",".$x;
+		    $query = "SELECT * FROM hot_view LIMIT ".$y.",".$x;
 		    $data = array();
 
 		    // Thuc thi cau lenh truy van co so du lieu

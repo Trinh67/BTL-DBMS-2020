@@ -2,10 +2,6 @@
 <html class="no-js" lang="">
     <?php require_once('views/include/head.php') ?>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <!-- header section start -->
 		<?php require_once('views/include/header.php') ?>
         <!-- header section end -->
@@ -61,7 +57,7 @@
 												<a href="#"><img src=<?= $value['image'] ?> alt="Product Title" width="270px" height="340px"/></a>
 												<div class="actions-btn">
 													<a href="?mod=cart&act=add&id=<?= $value['productCode'] ?>"><i class="mdi mdi-cart"></i></a>
-													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
+													<a href="?mod=product&act=detail&id=<?= $value['productCode'] ?>&views=<?= $value['views'] ?>" data-toggle="modal" data-target="#quick-view"><i class="mdi mdi-eye"></i></a>
 													<a href="#"><i class="mdi mdi-heart"></i></a>
 												</div>
 											</div>

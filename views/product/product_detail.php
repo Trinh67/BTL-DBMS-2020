@@ -58,7 +58,7 @@
 						<h3><?= $data['productName'] ?></h3>
 						<span>Sport men’s fashion</span>
 						<div class="ratting floatright">
-							<p>( <?= $data['views'] ?> Rating )</p>
+							<p>( <?= $data['views'] ?> Views )</p>
 							<i class="mdi mdi-star"></i>
 							<i class="mdi mdi-star"></i>
 							<i class="mdi mdi-star"></i>

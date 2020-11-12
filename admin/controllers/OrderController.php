@@ -21,11 +21,11 @@
 		}
 
 
-		// public function update(){
+		//public function update(){
 		// 	$id = isset($_GET['id'])?$_GET['id']:0;
 		// 	$order = $this->order_model->find($id);
 		// 	require_once('views/order/order_update.php');		
-		// }
+		//}
 
 		// public function edit(){
 		// 	$data = array();

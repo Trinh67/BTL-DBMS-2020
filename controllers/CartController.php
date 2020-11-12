@@ -63,6 +63,25 @@
 					}
 		}
 
+		public function order(){
+			if(isset( $_SESSION['cart']))
+				$products = $_SESSION['cart'];
+			else $products = null;
+
+			$status = $this->cate_model->insert($products);
+
+			if($status == true){
+		    	setcookie('msg','Đặt hàng thành công!!! Tiếp tục mua hàng nào!!!',time()+2);
+				unset($_SESSION['cart']);
+				unset($_SESSION['sum']);
+		    	header('Location: ?mod=page&act=home');
+		    }
+		    else {
+		    	setcookie('msg','Thêm mới không thành công',time()+1);
+		    	header('Location: ?mod=page');
+		    }
+		}
+
 		public function mail(){
 			$data = array();
 			require_once('views/cart/infor.php');

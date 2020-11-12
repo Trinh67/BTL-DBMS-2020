@@ -2,11 +2,6 @@
     require_once("Model.php");
 	class product extends Model{
 		function increase($data){
-        	// $v = "";
-            // foreach ($data as $key => $value) {
-            // 	$v .= $key."='".$value."',";
-            // }
-            // $v = trim($v,",");
         	// Cau lenh truy van co so du lieu
         	$query = "UPDATE products SET views = ".$data["views"]." WHERE productCode ='".$data['productCode']."'";
 			//print($query); die;

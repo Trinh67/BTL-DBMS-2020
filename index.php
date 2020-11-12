@@ -1,7 +1,7 @@
 <?php 
     session_start();
 	$mod = (isset($_GET['mod'])?$_GET['mod']:'page');
-	$act = (isset($_GET['act'])?$_GET['act']:'list');
+	$act = (isset($_GET['act'])?$_GET['act']:(isset($_POST['act'])?$_POST['act']:'list'));
 
 	switch ($mod) {
 		case 'login':
@@ -74,6 +74,9 @@
 					break;
 				case 'delete':
 				    $controller_obj->delete();
+					break;
+				case 'order':
+					$controller_obj->order();
 					break;
 				case 'mail':
 					$controller_obj->mail();

@@ -38,7 +38,7 @@
 										<ul>
 											<li>
 												<i class="mdi mdi-map-marker"></i>
-												<p>ADD 77/145, Cổ Nhuế Stree, Cổ Nhuế, Bắc Từ Liêm, Hà Nội</p>
+												<p>ADD 77/145, Cổ Nhuế Street, Cổ Nhuế, Bắc Từ Liêm, Hà Nội</p>
 											</li>
 											<li>
 												<i class="mdi mdi-phone"></i>
@@ -63,7 +63,7 @@
 											<li><a href="#"><i class="mdi mdi-menu-right"></i>My Account</a></li>
 											<li><a href="#"><i class="mdi mdi-menu-right"></i>My Cart</a></li>
 											<li><a href="#"><i class="mdi mdi-menu-right"></i>Sign In</a></li>
-											<li><a href="#"><i class="mdi mdi-menu-right"></i>Check out</a></li>
+											<li><a href="#"><i class="mdi mdi-menu-right"></i>Sign Out</a></li>
 										</ul>
 									</div>
 								</div>
@@ -105,7 +105,7 @@
 						</div>
 						<br/><br/>
 						<div class="row">
-							<div class="col-xs-12 col-sm-6" align="center">
+							<div class="col-xs-12 col-sm-12" align="center">
 								<p>&copy; Sportshop 2020. University of Engineering and Technology.</p>
 							</div>
 						</div>

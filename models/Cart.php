@@ -21,7 +21,9 @@
 			$query .= "INSERT INTO orderdetails(".$f.") VALUES (".$v.");";
 		
 			}
-			$query .= "INSERT INTO orders(orderNumber,statusOrder) VALUES (10014,'In Process');";
+			if(isset($_SESSION['customer']["customerNumber"])) $c = $_SESSION['customer']["customerNumber"];
+			else $c = $_SESSION['employee']["employeeNumber"];
+			$query .= "INSERT INTO orders(orderNumber,statusOrder,customerNumber) VALUES (10014,'In Process',".$c.");";
 			//print($query); die;
 		    // Thuc thi cau lenh truy van co so du lieu
 		    return $this->connection->query($query);

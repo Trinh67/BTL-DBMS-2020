@@ -67,5 +67,29 @@
 		    	header('Location: ?mod=page');
 		    }
 		}
+
+		public function edit(){
+			$data = array();
+			$data['customerNumber'] = $_SESSION['customer']['customerNumber'];
+			$data['contactFirstName'] = $_POST['firstName'];
+			$data['contactLastName'] = $_POST['lastName'];
+			$data['email'] = $_POST['email'];
+			$data['phone'] = $_POST['phone'];
+			$data['addressLine1'] = $_POST['address'];
+			$data['city'] = $_POST['city'];
+			$data['country'] = $_POST['country'];
+
+		    $status = $this->login_model->edit($data);
+
+		    if($status == true){
+				setcookie('msg','Cập nhật thành công',time()+1);
+				unset($_SESSION['customer']);
+		    	header('Location: ?mod=page&act=home');
+		    }
+		    else {
+		    	setcookie('msg','Cập nhật không thành công',time()+1);
+		    	header('Location: ?mod=page&act=home');
+		    }
+		}
 	}
  ?>

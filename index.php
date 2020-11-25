@@ -20,6 +20,9 @@
 				case 'register':
 					$controller_obj->store();
 					break;
+				case 'edit':
+					$controller_obj->edit();
+					break;
 				default:
 					require_once('views/page/error-404.php');
 					break;

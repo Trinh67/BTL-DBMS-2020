@@ -2,10 +2,6 @@
 <html class="no-js" lang="">
 	<?php require_once('views/include/head.php') ?>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <!-- header section start -->
 		<?php require_once('views/include/header.php') ?>
         <!-- header section end -->
@@ -30,10 +26,11 @@
 		<section class="pages my-account-page section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6">
+				    <div class="col-xs-12 col-sm-2"></div>
+					<div class="col-xs-12 col-sm-8">
 						<div class="padding60">
-							<div class="log-title">
-								<h3><strong>My Account</strong></h3>
+							<div class="log-title" align="center">
+								<h3><strong>Account's Information</strong></h3>
 							</div>
 							<div class="prament-area main-input">
 								<ul class="panel-group" id="accordion">
@@ -41,50 +38,30 @@
 										<div id="collapse1" class="panel-collapse collapse in">
 											<div class="single-log-info">
 												<div class="custom-input">
-													<form action="mail.php" method="post">
+													<form action="?mod=login&act=edit" method="post" style="color: black">
 														<div class="row">
-															<div class="col-md-6">
+															<div class="col-md-6" >
 																<label>First Name:</label>
-																<input type="text" name="name" placeholder="<?php if(isset($_SESSION['customer']['contactFirstName'])) echo $_SESSION['customer']['contactFirstName']; 
+																<input style="color: black" type="text" name="firstName" value="<?php if(isset($_SESSION['customer']['contactFirstName'])) echo $_SESSION['customer']['contactFirstName']; 
 											else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['firstName'];?>" />
 															</div>
 															<div class="col-md-6">
 																<label>Last Name:</label>
-																<input type="text" name="name" placeholder="<?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
+																<input style="color: black" type="text" name="lastName" value="<?php if(isset($_SESSION['customer']['contactLastName'])) echo $_SESSION['customer']['contactLastName']; 
 											else if(isset($_SESSION['admin']['name'])) echo $_SESSION['admin']['lastName'];?>" />
 															</div>
 														</div>
 															<label>Email:</label>
-															<input type="text" name="email" placeholder="<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; ?>"/>
-														<input type="text" name="text" placeholder="<?php if(isset($_SESSION['customer']['addressLine1'])) echo $_SESSION['customer']['addressLine1']; 
-											else if(isset($_SESSION['admin']['addressLine1'])) echo $_SESSION['admin']['addressLine1'];?>" />
-														<div class="custom-select">
-															<select class="form-control">
-																<option> <?php if(isset($_SESSION['customer']['city'])) echo $_SESSION['customer']['city']; 
-											else if(isset($_SESSION['admin']['city'])) echo $_SESSION['admin']['city'];?> </option>
-																<option> Ha Noi </option>
-																<option> Thanh Hoa </option>
-																<option> Son La </option>
-																<option> Nghe An </option>
-																<option> Nam Dinh </option>
-																<option> TP Ho Chi Minh </option>
-															</select>
-														</div>
-														<div class="custom-select">
-															<select class="form-control">
-																<option><?php if(isset($_SESSION['customer']['country'])) echo $_SESSION['customer']['country']; 
-											else if(isset($_SESSION['admin']['country'])) echo $_SESSION['admin']['country'];?></option>
-																<option> Viet Nam </option>
-																<option> United States </option>
-																<option> United Kingdom </option>
-																<option> Canada </option>
-																<option> Malaysia </option>
-																<option> United Arab Emirates </option>
-															</select>
-														</div>
-														<div class="submit-text">
-															<a href="#">Save</a>
-														</div>
+															<input style="color: black" type="email" name="email" value="<?php if(isset($_SESSION['customer']['email'])) echo $_SESSION['customer']['email']; ?>"/>
+															<label>Phone:</label>
+															<input style="color: black" type="text" name="phone" value="<?php if(isset($_SESSION['customer']['phone'])) echo $_SESSION['customer']['phone']; ?>"/>
+															<label>Address:</label>
+															<input style="color: black" type="text" name="address" value="<?php if(isset($_SESSION['customer']['addressLine1'])) echo $_SESSION['customer']['addressLine1'] ?> "/>
+															<label>City:</label>
+															<input style="color: black" type="text" name="city" value="<?php if(isset($_SESSION['customer']['city'])) echo $_SESSION['customer']['city'] ?> "/>
+															<label>Country:</label>
+															<input style="color: black" type="text" name="country" value="<?php if(isset($_SESSION['customer']['country'])) echo $_SESSION['customer']['country'] ?> "/>
+														<button type="submit" class="btn btn-primary">Save</button>
 													</form>
 												</div>
 											</div>

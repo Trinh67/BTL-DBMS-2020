@@ -136,21 +136,21 @@
 						<div class="service-text">
 							<i class="mdi mdi-truck"></i>
 							<h4>home delivery</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
+							<p>We ship your orders to your home<br /> in three days.</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-lock"></i>
 							<h4>PAYMENT SECURED</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
+							<p>All of your payments is secured<br /> You can feel free to use.</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="service-text">
 							<i class="mdi mdi-rotate-left"></i>
 							<h4>30 days money back</h4>
-							<p>Contrary to popular belief, Lorem Ipsum is <br /> not simply random text.</p>
+							<p>Youn can be received your money back<br /> if products is not available to you</p>
 						</div>
 					</div>
 				</div>

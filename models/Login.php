@@ -37,7 +37,20 @@
 		    //print($query); die;
 		    // Thuc thi cau lenh truy van co so du lieu
 		    return $this->connection->query($query);
-        }
+		}
+		
+		function edit($data){
+			$v = "";
+			foreach ($data as $key => $value) {
+				$v .= $key."='".$value."',";
+			}
+			$v = trim($v,",");
+			// Cau lenh truy van co so du lieu
+			$query = "UPDATE customers SET ".$v." WHERE customerNumber =".$data['customerNumber'];
+			//print($query); die;
+			// Thuc thi cau lenh truy van co so du lieu
+			return $this->connection->query($query);
+		}
 
 	}
  ?>
